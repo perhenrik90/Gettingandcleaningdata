@@ -1,6 +1,6 @@
 # CodeBook
 
-## data.csv
+## data.txt
 
 * "activity" - labels the activity measured
 
@@ -12,7 +12,7 @@
 
 * "dataset" - labels witch dataset the activity is stored
 
-## data2.csv
+## data2.txt
 
 * "activity" - labels the activity measured
 
