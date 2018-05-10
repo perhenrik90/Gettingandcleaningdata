@@ -1,6 +1,6 @@
 # CodeBook
 
-## firstdataset.csv
+## data.csv
 
 * "activity" - labels the activity measured
 

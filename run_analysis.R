@@ -1,4 +1,4 @@
-
+library(dplyr)
 
 # Find a activity label based on numeric value given in activity_labels.txt
 findLabel <- function(n){
@@ -84,7 +84,11 @@ rm(traindata)
 rm(testdata)
 
 # write dataset to csv
-write.csv(data, "firstdataset.csv")
+write.csv(data, "data.csv", row.names=FALSE)
 
 
+# use dplyr to aggregate the new dataset
+data2 <- within(data, rm("dataset")) # remove unsued variable
+data2 <- data2 %>% group_by(subjectid, activity) %>% summarise_all(funs(mean))
 
+write.csv(data2, "data2.csv", row.names=FALSE)
