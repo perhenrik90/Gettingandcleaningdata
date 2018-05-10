@@ -84,11 +84,11 @@ rm(traindata)
 rm(testdata)
 
 # write dataset to csv
-write.csv(data, "data.csv", row.names=FALSE)
+write.table(data, "data.txt", row.names=FALSE)
 
 
 # use dplyr to aggregate the new dataset
 data2 <- within(data, rm("dataset")) # remove unsued variable
 data2 <- data2 %>% group_by(subjectid, activity) %>% summarise_all(funs(mean))
 
-write.csv(data2, "data2.csv", row.names=FALSE)
+write.table(data2, "data2.txt", row.names=FALSE)
